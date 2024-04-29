@@ -1,0 +1,9 @@
+{
+    "type": "module",
+    "scripts": {
+        "review-mini": "elm make src/Main.elm --output elm.js && node index.js"
+    },
+    "dependencies": {
+        "@lue-bird/elm-review-mini-cli": "^1.0.0"
+    }
+}
