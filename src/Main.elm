@@ -5,12 +5,12 @@ port module Main exposing (main)
 
 import Json.Encode
 import Json.Decode
-import Reviews
+import Review.Cli
 
 
-main : Platform.Program () Review.ProgramState Review.ProgramEvent
+main : Review.Cli.Program
 main =
-    Review.program { toJs = toJs, fromJs = fromJs, reviews = Reviews.reviews }
+    Review.Cli.program { reviews = Reviews.reviews, toJs = toJs, fromJs = fromJs }
 
 
 port toJs : Json.Encode.Value -> Cmd event_
