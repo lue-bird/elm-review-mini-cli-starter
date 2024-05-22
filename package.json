@@ -1,6 +1,6 @@
 {
     "type": "module",
     "devDependencies": {
-        "@lue-bird/elm-review-mini-cli": "^1.0.0"
+        "@lue-bird/elm-review-mini-cli": "^1.0.1"
     }
 }
