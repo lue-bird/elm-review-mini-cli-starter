@@ -1,17 +1,12 @@
-Minimal setup for an [`elm-review-mini`](https://dark.elm.dmy.fr/packages/lue-bird/elm-review-mini/latest/) CLI program
-
+[`elm-review-mini`](https://dark.elm.dmy.fr/packages/lue-bird/elm-review-mini/latest/) configuration and CLI setup (requires the latest `node.js` and `npm` to be installed).
+Before the first run,
 ```bash
-curl -L https://github.com/lue-bird/elm-review-mini-cli-starter/tarball/master review-mini | tar xz
-
-npm install && \
-npm run review-mini
+npm install --prefix review-mini
 ```
-will launch the CLI which watches for changes to your elm modules and extra files and reports errors back for you with fixes to accept/reject. 
 
-Since the CLI is a self-contained elm application, you can add new reviews with `elm install` (e.g. [search for packages elm-review-mini-...](https://dark.elm.dmy.fr/?q=elm-review-mini-)), just like any other elm project dependency.
-And don't forget to actually put it in the list in `src/Reviews.elm` and configure it :)
-
-For all future runs, you just need
+To watch for changes to your files and reports errors for you with fixes to accept/reject:
 ```bash
-npm run review-mini
+node review-mini/cli
 ```
+
+Since the CLI is a regular elm application, you can add new reviews with `elm install` ([search for packages elm-review-mini-...](https://dark.elm.dmy.fr/?q=elm-review-mini-) for example), then put them in the list in `src/ReviewConfiguration.elm` and configure them.
